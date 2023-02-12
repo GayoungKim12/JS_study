@@ -1,43 +1,37 @@
-// 16진수로 만들기
-function solution(n) {
-  var answer = '';
-  answer = n.toString(16);
-  return answer;
+const str = "Hello World";
+if (~str.indexOf("Hey")) {
+  console.log('참');
+} else {
+  console.log('거짓');
 }
 
-// 8진수로 만들기
-function solution(n) {
-  var answer = '';
-  answer = n.toString(8);
-  return answer;
+const arr = [1, 8, 3];
+if (arr.indexOf((it) => it === 5)) {
+  console.log('참');
+} else {
+  console.log('거짓')
 }
 
-// 1 ~ n까지 곱하기
-function solution(n) {
-  var answer = 0;
-  if (n > 0) {
-      answer = 1;
-      for (let i = n; i > 0; i--) {
-          answer = answer * i;
-      }
+console.log(Math.max(1, 3, 2));
+// Expected output: 3
+
+console.log(Math.max(-1, -3, -2));
+// Expected output: -1
+
+const array1 = [1, 3, 2];
+const array2 = [...array1, 5, 6, 7]
+
+console.log(Math.max(...array2));
+
+function sameStr (strArr) {
+  const strSameNum = [];
+  const strSet = new Set(strArr);
+  for (const string of strSet) {
+    const strNum = strArr.filter((el) => el === string);
+    strSameNum.push(strNum.length);
   }
-  return answer;
+
+  return strSameNum;
 }
 
-// 피보나치 배열을 만들고 그 배열의 n번째 값 구하기
-function solution(n) {
-  var answer = 0;
-  const arr = [1, 1];
-  for (i = 2; i < 39; i++) {
-      arr[i] = arr[i-2] + arr[i-1];
-  };
-  answer = arr[n-1];
-  return answer;
-}
-
-// s의 문자열이 target의 문자열에 포함되는지 확인하기
-function solution(s, target) {
-  var answer = true;
-  answer = target.includes(s);
-  return answer;
-}
+console.log(sameStr(['g', 'g', 'e', 'e', 'g', 'ga', 'a', 'a', 'ga', 'ga', 'ga', 'ga']));
