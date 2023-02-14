@@ -21,7 +21,7 @@
 
 - on(event) 사용
   - 해당하는 DOM 요소에 event 발생 시 on(event) 함수 실행
-  - <pre><code>{<div onclick="함수이름">}</div></code></pre>
+  - `<div onclick="함수이름"></div>`
   - Node.onclick = (event) => { 실행할 코드 }
 - addEventListener("event", handler) 사용
   - 해당 요소에 event 발생 시 handler 실행
