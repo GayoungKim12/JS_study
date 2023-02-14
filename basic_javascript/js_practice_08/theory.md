@@ -74,51 +74,35 @@
     - 로컬 스토리지
       ```
       localStorage.setItem('key', value);
-      ```
-      ```
       localStorage.key = value;
       ```
     - 세션 스토리지
       ```
       sessionStorage.setItem('key', value);
-      ```
-      ```
       sessionStorage.key = value;
       ```
   - 웹 스토리지에 접근
     - 로컬 스토리지
       ```
       localStorage.getItem('key');
-      ```
-      ```
       localStorage.key;
-      ```
-      ```
       localStorage['key'];
       ```
     - 세션 스토리지
       ```
       sessionStorage.getItem('key');
-      ```
-      ```
       sessionStorage.key;
-      ```
-      ```
       sessionStorage['key'];
       ```
   - 웹 스토리지 삭제
     - 로컬 스토리지
       ```
       localStorage.removeItem('key');
-      ```
-      ```
       localStorage.clear();
       ```
     - 세션 스토리지
       ```
       sessionStorage.removeItem('key');
-      ```
-      ```
       sessionStorage.clear();
       ```
 
