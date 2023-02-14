@@ -62,7 +62,7 @@
 - 전역 객체로 존재
 - 보는 방법: 개발자도구(F12) > Application 탭 > Storage > Local Storage/Session Storage
 
-  ### 스토리지 종류
+  ### 종류
 
   - 로컬 스토리지(Local Storage): 브라우저에 저장되어 브라우저 종료 후 재시작해도 유지되는 데이터
   - 세션 스토리지(Session Storage): 브라우저를 종료한 경우에는 삭제되지만 새로고침한 경우에는 유지되는 데이터
