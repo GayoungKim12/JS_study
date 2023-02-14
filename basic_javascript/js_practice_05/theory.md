@@ -30,6 +30,7 @@ Error {
   name: 에러이름,
   message: dpfjdml tkdtpsodyd,
   stack: 호출 스택,
+  ...
 }
 ```
 
