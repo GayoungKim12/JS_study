@@ -11,7 +11,8 @@
 
 try문에서 오류가 발생하면 catch문에서 에러 객체를 인자로 받아 에러를
 
-```try {
+```
+try {
   실행하려는 코드
 } catch (error) {
   에러 발생 시 실행할 코드
@@ -24,7 +25,8 @@ try문에서 오류가 발생하면 catch문에서 에러 객체를 인자로 �
 
 Error의 정보를 담고있는 객체
 
-```Error {
+```
+Error {
   name: 에러이름,
   message: dpfjdml tkdtpsodyd,
   stack: 호출 스택,
