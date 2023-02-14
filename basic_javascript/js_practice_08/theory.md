@@ -27,11 +27,7 @@
   - HTTPOnly: 브라우저나 클라이언트에서 Cookie에 접근할 수 없도록 제한
   - Secure: HTTPS로 통신하는 경우에만 Cookie 전송 가능
 
-<<<<<<< HEAD
   ### Cookie 사용법
-=======
-## 사용 방법
->>>>>>> 58339266c07de897dcc0d6798b884891b3abd070
 
   - Cookie 쓰기
     - 클라이언트
