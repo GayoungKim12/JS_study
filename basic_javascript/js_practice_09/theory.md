@@ -26,5 +26,5 @@
 ## 기타 데이터 포맷
 
 - Text: 기본 문자열
-- CSV(Comma-Separated Values): 콤마로 필드를 구분한 텍스트 파일
+- CSV(Comma-Separated Values): 콤마로 필드를 구분한 텍스트 포맷
 - XML(eXtensible Markup Language)
