@@ -1,35 +1,32 @@
-# JSON(JavaScript Object Notation)
+# 브라우저 기능
 
-자바스크립트에서 객체를 표현하기 위해 만들어진 데이터 포맷
+- Cookie: 특정시간동안 데이터가 사용되지 않고 이후 삭제되도록 설정할 때 사용
+- Web Storage
+  - Local Storage: 브라우저를 재시작했을 때 데이터가 삭제되지 않기를 바랄 때 사용
+  - Session Storage: 같은 탭에서 새로고침을 했을 때 값이 변하지 않기를 바랄 때 사용
 
-- 현재는 범용적으로 사용됨
-  - 클라이언트 코드에 데이터를 저장
-  - 서버와의 통신에서 데이터를 전달하고 받음
+## Cookie
 
-## 기본 형태
+브라우저에 저장되는 작은 크기의 문자열
 
-- .json 확장자 사용
-- 객체로 이루어진 코드
-  - 키는 ""(쌍따옴표)로 감싸져야 함
-  - 문자열도 ""(쌍따옴표)로만 감싸져야 함
-  - 마지막 키-값 쌍에 ,(쉼표) 제외
-- 주석 사용 불가능
+- 인증정보를 저장하기 위해 사용
+- 대부분 서버에서 브라우저에 할당
+- 보는 방법: 개발자도구(F12) > Application 탭 > Storage > Cookie
 
-## 자바스크립트와 JSON
+  ### 구성 요소
 
-- 자바스크립트에는 JSON이라는 전역 객체 존재
-- JSON 사용법
-  - JSON.parse(JSON string): JSON을 객체로 변환
-  - JSON.stringify(객체 변수): 객체를 JSON으로 변환
-    - 객체의 속성값이 함수나 undefined면 해당 속성은 무시하고 직렬화
+  자바스크립트에서 제공하는 함수로 네트워크 통신을 할 때 사용
 
-## 기타 데이터 포맷
+  - Name: key
+  - Value: 값
+  - Domain: Cookie에 접근 가능한 도메인을 지정
+  - Path: Cookie에 접근 가능한 경로를 지정
+  - Path: Cookie에 접근 가능한 경로를 지정
+  - Expires/max-age: 유효일자/만료기간
+    - 둘 중 하나라도 설정되어 있지 않으면 브라우저를 닫을 때 Cookie 삭제
+  - HTTPOnly: 브라우저나 클라이언트에서 Cookie에 접근할 수 없도록 제한
+  - Secure: HTTPS로 통신하는 경우에만 Cookie 전송 가능
 
-<<<<<<< HEAD
-- Text: 기본 문자열
-- CSV(Comma-Separated Values): 콤마로 필드를 구분한 텍스트 파일
-- XML(eXtensible Markup Language)
-=======
   ### Cookie 사용법
 
   - Cookie 쓰기
@@ -65,7 +62,7 @@
 - 전역 객체로 존재
 - 보는 방법: 개발자도구(F12) > Application 탭 > Storage > Local Storage/Session Storage
 
-  ### 종류
+  ### 스토리지 종류
 
   - 로컬 스토리지(Local Storage): 브라우저에 저장되어 브라우저 종료 후 재시작해도 유지되는 데이터
   - 세션 스토리지(Session Storage): 브라우저를 종료한 경우에는 삭제되지만 새로고침한 경우에는 유지되는 데이터
@@ -119,4 +116,3 @@
   - 요청 헤더에 포함되지 않아 Cookie보다 많은 저장 가능
   - 클라이언트에서만 조정 가능
   - 서브 도메인이 같아야 해당 URL에서 접근 가능
->>>>>>> 883bf5d75055972046eafa3ffc0f7375b0f09b1a
