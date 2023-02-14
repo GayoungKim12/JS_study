@@ -39,7 +39,7 @@
       - DELETE: 서버에 있는 데이터를 삭제할 때 사용
         ex) 게시물 삭제
     - headers: 서버에 부가적으로 전달할 정보
-      - [Cookie](https://github.com/GayoungKim12/JS_study/blob/master/basic_javascript/js_practice_08/theory.md##cookie): 브라우저에 있는 Cookie를 서버에 전송하면 Cookie는 인증정보를 담고 있기 때문에 인증정보가 필요한 API에 인증을 할 수 있도록 함
+      - [Cookie](https://github.com/GayoungKim12/JS_study/blob/master/basic_javascript/js_practice_08/theory.md#cookie): 브라우저에 있는 Cookie를 서버에 전송하면 Cookie는 인증정보를 담고 있기 때문에 인증정보가 필요한 API에 인증을 할 수 있도록 함
       - UserAgent: 에러 등을 서버에서 기록할 때 어떤 환경에서 발생했는지 파악하기 위해 서버 로깅 시 사용
     - body: 클라이언트에서 서버로 전달할 데이터가 있을 때 데이터를 실어보내는 필드
 
