@@ -19,20 +19,23 @@
 
 ## 이벤트와 핸들러 연결
 
-- on(event) 사용
-  - 해당하는 DOM 요소에 event 발생 시 on(event) 함수 실행
+- on(이벤트이름) 사용
+  - 해당하는 DOM 요소에 event 발생 시 on(이벤트이름) 함수 실행
   - `<div onclick="함수이름"></div>`
   - Node.onclick = (event) => { 실행할 코드 }
 - addEventListener("event", handler) 사용
   - 해당 요소에 event 발생 시 handler 실행
   - Node.addEventListener("click", handler)
 
-## 이벤트 객체
+## Event 객체
 
-발생한 이벤트에 대한 정보가 담겨 있음
+발생한 이벤트에 대한 정보가 담겨 있는 객체
 
+- 이벤트 객체는 핸들러의 인자로 활용할 수 있음
 - event.target: 이벤트가 발생한 DOM
 
 ## 이벤트 버블링
 
 자식요소에 이벤트가 발생하면 부모요소에 이벤트가 전달되는 현상
+
+- event.stopPropagation(): 이벤트 버블링을 중지

@@ -47,3 +47,24 @@ new Array(10).fill(0).forEach((_, index) => {
     })
 }) // 길이가 10이고, 각각의 요소가 0인 배열 => 각각의 요소가 이벤트인 배열
 
+// 이벤트 버블링
+
+const depth1 = document.querySelector('#depth1');
+const depth2 = document.querySelector('#depth2');
+const depth3 = document.querySelector('#depth3');
+
+depth1.addEventListener("click", (event) => {
+    console.log(event.target);
+    console.log(event.currentTarget);
+})
+depth2.addEventListener("click", (event) => {
+    console.log(event.target);
+    console.log(event.currentTarget);
+
+    event.stopPropagation();
+})
+depth3.addEventListener("click", (event) => {
+    console.log(event.target);
+    console.log(event.currentTarget);
+}) // depth3 클릭 => depth3에 적용된 클릭 이벤트 핸들러 실행 => 이벤트 버블링 => depth2에 적용된 클릭 이벤트 핸들러 실행 => 이벤트 버블링 중지
+
