@@ -21,7 +21,6 @@
   - Value: 값
   - Domain: Cookie에 접근 가능한 도메인을 지정
   - Path: Cookie에 접근 가능한 경로를 지정
-  - Path: Cookie에 접근 가능한 경로를 지정
   - Expires/max-age: 유효일자/만료기간
     - 둘 중 하나라도 설정되어 있지 않으면 브라우저를 닫을 때 Cookie 삭제
   - HTTPOnly: 브라우저나 클라이언트에서 Cookie에 접근할 수 없도록 제한
