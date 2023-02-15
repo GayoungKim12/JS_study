@@ -28,7 +28,7 @@
     - API End Point(API 요청의 목적지)라 일컬음
       - API(Application Programming Interface): 서버에서 데이터 전달을 위해 구축해둔 구현체
   - Option 객체
-    - fetch의 첫 번째 인자
+    - fetch의 두 번째 인자
     - method: 네트워크 요청을 보낼 때 그 요청의 종류
       - GET: 서버에서 데이터를 가져오기만 할 때 사용
         ex) 사이트 불러오기
