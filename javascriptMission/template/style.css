@@ -1,57 +1,111 @@
-html,
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Open Sans';
   font-weight: 300;
-  height: 100%;
-  margin: 0;
+  background-color: #d6e1e5;
 }
-/**
- * 새로고침 시 nav 요소와 main 요소의 위치가 이동하는 움직임이 사용자에게 보이는 경우가 있다.
- * 이를 방지하기 위해 미리 css에 body {visibility: 'hidden'}을 추가해 두었다.
- * active 클래스가 추가된 이후에 body를 표시해서 새로고침 시 nav 요소와 main 요소의 위치가 이동하는 움직임이 사용자에게 보이지 않도록 한다.
- */
-body {
-  visibility: hidden;
+.title {
+  color: #db5b33;
+  font-weight: 300;
+  text-align: center;
 }
-.container {
+.analog-clock {
   position: relative;
-  overflow-x: hidden; /* 가로 scroll bar 방지 */
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 40px auto;
+  border: 5px solid white;
+  box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.analog-clock::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.analog-clock > .hand {
+  /* 자바스크립트로 --deg 값을 변경한다. */
+  --deg: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  transform: translate3D(-50%, 0, 0) rotate(calc(var(--deg) * 1deg));
+  z-index: 10;
+}
+.analog-clock > .hand.second {
+  width: 4px;
+  height: 120px;
+  background-color: red;
+}
+.analog-clock > .hand.minute {
+  width: 6px;
+  height: 110px;
+  background-color: black;
+}
+.analog-clock > .hand.hour {
+  width: 8px;
+  height: 80px;
+  background-color: black;
+}
+
+/* .analog-clock과 같은 크기의 블록 요소를 회전시킨다. */
+.analog-clock > .time {
+  position: absolute;
   width: 100%;
   height: 100%;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
-nav,
-main {
-  position: absolute;
-  height: 100%;
-  transition: transform 0.5s;
+
+.analog-clock > .time.time1 {
+  transform: rotate(30deg);
 }
-nav {
-  left: -300px;
-  width: 300px;
-  background: #20232a;
+.analog-clock > .time.time2 {
+  transform: rotate(60deg);
 }
-main {
-  height: 100%;
-  padding: 20px;
+.analog-clock > .time.time3 {
+  transform: rotate(90deg);
 }
-.toggle {
-  font-size: 2em;
-  color: maroon;
-  cursor: pointer;
-  transition: transform 0.5s;
+.analog-clock > .time.time4 {
+  transform: rotate(120deg);
 }
-/* nav 요소 활성화 */
-nav.active,
-nav.active ~ main {
-  transform: translate3d(300px, 0, 0);
+.analog-clock > .time.time5 {
+  transform: rotate(150deg);
 }
-nav.active ~ main > .toggle {
+.analog-clock > .time.time6 {
   transform: rotate(180deg);
 }
-/**
- * 초기 렌더링 시에 불필요한 트랜지션을 방지하기 위해 초기 렌더링 시에 body 요소에 추가하고 렌더링이 완료하면 제거하여 정상적으로 트랜지션이 동작하도록 한다.
- * https://css-tricks.com/transitions-only-after-page-load
- */
-.preload * {
-  transition: none !important;
+.analog-clock > .time.time7 {
+  transform: rotate(210deg);
+}
+.analog-clock > .time.time8 {
+  transform: rotate(240deg);
+}
+.analog-clock > .time.time9 {
+  transform: rotate(270deg);
+}
+.analog-clock > .time.time10 {
+  transform: rotate(300deg);
+}
+.analog-clock > .time.time11 {
+  transform: rotate(330deg);
 }
