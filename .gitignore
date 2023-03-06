@@ -1,7 +1,9 @@
 JS_clonecoding/
 
 JS_CodingTest/practice coding test/
+JS_CodingTest/**/*
 
 javascriptMission/__MACOSX/
 javascriptMission/node_modules/
 javascriptMission/.eslintrc.js
+javascriptMission/*.json
