@@ -8,7 +8,7 @@ const makeDOMwithProperties = (domType, propertyMap) => {
 };
 
 // 시침, 분침, 초침을 생성하는 함수
-const handsDOM = (analogClock) => {
+const setHands = (analogClock) => {
   const units = ['hour', 'minute', 'second'];
   units.forEach((unit) => {
     const handDOM = makeDOMwithProperties('div', {
@@ -19,7 +19,7 @@ const handsDOM = (analogClock) => {
 };
 
 // 시간 바를 생성하는 함수
-const timebarsDOM = (analogClock) => {
+const setTimebars = (analogClock) => {
   for(let i = 1; i <= 12; i += 1) {
     const timeDOM = makeDOMwithProperties('div', {
       className : `time time${i}`,
@@ -30,9 +30,9 @@ const timebarsDOM = (analogClock) => {
 };
 
 // 아날로그 시계 구성하는 함수
-const containerDOM = (container) => {
-  handsDOM(container);
-  timebarsDOM(container);
+const setAnalogClock = (container) => {
+  setHands(container);
+  setTimebars(container);
 };
 
 // 현재 시간 가져오는 함수
@@ -43,7 +43,7 @@ const getTime = () => {
 };
 
 // 시침, 분침, 초침 세팅하기
-const setHands = (container) => {
+const settingHands = (container) => {
   const time = getTime();
 
   const hoursNow = Number(time[0]) > 12 ? Number(time[0]) - 12 : Number(time[0]);
@@ -61,9 +61,9 @@ const setHands = (container) => {
 
 const AnalogClock = $container => {
   // do something!
-  containerDOM($container);
+  setAnalogClock($container);
   setInterval(() => {
-    setHands($container)
+    settingHands($container)
   }, 500);
 };
 
