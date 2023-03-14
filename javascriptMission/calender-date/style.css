@@ -1,0 +1,133 @@
+:root {
+  --calender-width: 320px;
+  --point-color: rgb(70, 191, 123);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(227 234 235);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 45px;
+  color: rgb(243 96 43);
+}
+
+.date-picker {
+  padding: 1% 0.5%;
+  margin-bottom: 10px;
+  width: 180px;
+  height: 30px;
+}
+
+.calender-container {
+  display: none;
+}
+
+.calender {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--calender-width);
+  height: calc(var(--calender-width) * 1.2);
+  padding: 1%;
+}
+
+.calender-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  width: 100%;
+  height: 22%;
+  border-radius: 12px 12px 0 0;
+  background-color: var(--point-color);
+  box-shadow: 0px 0px 10px 1px rgba(165, 165, 165, 0.7);
+  color: #fff;
+}
+
+.calender-nav .month-and-year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.calender-nav .month {
+  display: block;
+  margin-bottom: 1%;
+  font-size: calc(var(--calender-width) * 0.065);
+}
+.calender-nav .year {
+  display: block;
+  font-size: calc(var(--calender-width) * 0.045);
+}
+
+.calender-nav button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: calc(var(--calender-width) * 0.04);
+}
+.calender-nav button i {
+  color: white;
+}
+
+.calender-grid {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 78%;
+  border-radius: 0 0 12px 12px;
+  padding: 0 2% 2% 2%;
+  background-color: rgb(246, 247, 249);
+  text-align: center;
+  box-shadow: 0px 0px 10px 1px rgba(165, 165, 165, 0.7);
+  font-size: calc(var(--calender-width) * 0.04);
+  color:rgb(180, 180, 180);
+}
+
+.calender-grid span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(var(--calender-width) * 0.125);
+  height: calc(var(--calender-width) * 0.125);
+  font-size: calc(var(--calender-width) * 0.04);
+}
+
+.calender-grid .date {
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.calender-grid .date.today {
+  border: calc(var(--calender-width) * 0.005) solid var(--point-color);
+}
+
+.calender-grid .date.active,
+.calender-grid .date.select {
+  background-color: var(--point-color);
+  color: #fff;
+}
+
+.calender-grid .current {
+  color: black;
+}
+
+.calender-grid .current:nth-child(7n+1) {
+  color: red;
+}
