@@ -1,4 +1,4 @@
-import { makeDOMwithProperties } from './dom.js';
+import { makeDOMwithProperties } from './utils/dom.js';
 import StarRating from './star-rating/index.js';
 
 const $containers = [...document.querySelectorAll('.star-rating')];

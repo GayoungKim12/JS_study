@@ -1,11 +1,4 @@
-//  DOM 만들고 속성을 넣는 함수
-const makeDOMwithProperties = (domType, propertyMap) => {
-  const dom = document.createElement(domType);
-  Object.keys(propertyMap).forEach((key) => {
-    dom[key] = propertyMap[key];
-  });
-  return dom;
-};
+import { makeDOMwithProperties } from './utils/dom.js';
 
 // 시침, 분침, 초침을 생성하는 함수
 const setHands = (analogClock) => {
@@ -60,11 +53,11 @@ const settingHands = (container) => {
 };
 
 const AnalogClock = $container => {
-  // do something!
+  // 0.1초마다 반복
   setAnalogClock($container);
   setInterval(() => {
     settingHands($container)
-  }, 500);
+  }, 100);
 };
 
 export default AnalogClock;
