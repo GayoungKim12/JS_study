@@ -26,7 +26,7 @@ $containers.forEach(($container, i) => {
       detail: lastStarId,
     })
     $container.dispatchEvent(ratingChange);
-  })
+  });
 
   $container.addEventListener('rating-change', e => {
     const rating = e.detail;

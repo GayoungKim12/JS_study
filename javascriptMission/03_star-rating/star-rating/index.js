@@ -1,4 +1,3 @@
-// do something!
 import { makeDOMwithProperties } from "../utils/dom.js";
 
 // 설정한 별 개수만큼 별 생성하기
@@ -19,7 +18,7 @@ const setStarRatingContainer = (container) => {
   container.appendChild(starRatingContainer);
 
   return starRatingContainer;
-}
+};
 
 // 별 위에 마우스를 올리면 첫번째 별부터 마우스를 올린 별까지 hovered 클래스 포함하게 만들기
 const starsMouseOver = (e) => {
@@ -39,7 +38,7 @@ const starsMouseOver = (e) => {
       starIcon.classList.remove('hovered');
     }
   });
-}
+};
 
 // 마우스가 별점 공간에서 나가면 hovered 클래스가 포함된 별들 hovered 클래스 제거하기
 const starsMouseOut = (e) => {
@@ -50,7 +49,7 @@ const starsMouseOut = (e) => {
   starIcons.forEach((starIcon) => {
     starIcon.classList.remove('hovered');
   });
-}
+};
 
 // 마우스로 별을 클릭하면 첫번째 별부터 마우스를 올린 별까지 select 클래스 포함하게 만들기
 const starsClick = (e) => {
@@ -67,14 +66,14 @@ const starsClick = (e) => {
     } else {
       starIcon.classList = 'bx bxs-star';
     }
-  })
-}
+  });
+};
 
 const StarRating = (container) => {
   setStarRatingContainer(container);
   container.addEventListener('mouseover', starsMouseOver);
   container.addEventListener('mouseout', starsMouseOut);
   container.addEventListener('click', starsClick);
-}
+};
 
 export default StarRating;

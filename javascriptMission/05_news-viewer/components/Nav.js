@@ -1,5 +1,5 @@
 // do something!
-import { makeDOMwithProperties } from "../utils/dom.js"
+import { makeDOMwithProperties } from "../utils/dom.js";
 
 const categorys = [
   {
@@ -37,22 +37,22 @@ const categorys = [
     className: 'category-item',
     innerText: '기술',
   },
-]
+];
 
 const categoryList = makeDOMwithProperties('nav', {
   className: 'category-list',
-})
-const ulDOM = document.createElement('ul')
+});
+const ulDOM = document.createElement('ul');
 
 // category-nav를 생성하기
 const Nav = (target) => {
-  target.appendChild(categoryList)
-  categoryList.appendChild(ulDOM)
+  target.appendChild(categoryList);
+  categoryList.appendChild(ulDOM);
   categorys.forEach((category) => {
-    const categoryDOM = makeDOMwithProperties('li', category)
-    ulDOM.appendChild(categoryDOM)
-  })
-}
+    const categoryDOM = makeDOMwithProperties('li', category);
+    ulDOM.appendChild(categoryDOM);
+  });
+};
 
-export default Nav
+export default Nav;
 
